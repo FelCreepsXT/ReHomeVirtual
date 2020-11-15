@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReHomeVirtualBackEnd", "ReHomeVirtualBackEnd\ReHomeVirtualBackEnd.csproj", "{CAE72947-8F04-4154-8A75-FB4D1EC7E16E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE72947-8F04-4154-8A75-FB4D1EC7E16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE72947-8F04-4154-8A75-FB4D1EC7E16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE72947-8F04-4154-8A75-FB4D1EC7E16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE72947-8F04-4154-8A75-FB4D1EC7E16E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8AE7C67-9A8E-45A7-8F5A-C811FD5A93D3}
+	EndGlobalSection
+EndGlobal
