@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Diseño de patrones\\Proyecto\\Backend\\ReHomeVirtual\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {}
+    "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {}
   },
   "projects": {
-    "E:\\Diseño de patrones\\Proyecto\\Backend\\ReHomeVirtual\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {
+    "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Diseño de patrones\\Proyecto\\Backend\\ReHomeVirtual\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
+        "projectUniqueName": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
         "projectName": "ReHomeVirtualBackEnd",
-        "projectPath": "E:\\Diseño de patrones\\Proyecto\\Backend\\ReHomeVirtual\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
+        "projectPath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
         "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
-        "outputPath": "E:\\Diseño de patrones\\Proyecto\\Backend\\ReHomeVirtual\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd\\obj\\",
+        "outputPath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,44 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
