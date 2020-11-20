@@ -46,3 +46,15 @@ E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\
 E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.deps.json
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.runtimeconfig.json
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.runtimeconfig.dev.json
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.dll
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.pdb
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Annotations.dll
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\obj\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.csproj.CoreCompileInputs.cache
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\obj\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.MvcApplicationPartsAssemblyInfo.cs
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\obj\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.MvcApplicationPartsAssemblyInfo.cache
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\obj\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.dll
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\obj\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.pdb
+E:\Diseño de patrones\Proyecto\ReHomeVirtualUPC\ReHomeVirtualBackEnd\obj\Debug\netcoreapp3.1\ReHomeVirtualBackEnd.genruntimeconfig.cache

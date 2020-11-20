@@ -12,7 +12,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using VirtualExpress.General.Extensions;
+using ReHomeVirtualBackEnd.General.General.Persistence.Context;
+using ReHomeVirtualBackEnd.Membership.Domain.Repositories;
+using ReHomeVirtualBackEnd.Membership.Persistence.Repositories;
+using ReHomeVirtualBackEnd.General.Domain.Repositories;
+using ReHomeVirtualBackEnd.General.Repositories;
+using ReHomeVirtualBackEnd.General.Extensions;
+using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
+using ReHomeVirtualBackEnd.Membership.Services;
 
 namespace ReHomeVirtualBackEnd
 {
@@ -30,10 +37,19 @@ namespace ReHomeVirtualBackEnd
         {
             services.AddControllers();
 
-            services.AppDbContext<AppDbContext>(options =>
+            services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseInMemoryDatabase("rehomevirtual-api-in-memory");
             });
+
+            //Repositories
+            services.AddScoped<IPlanRepository, PlanRepository>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            //Services
+            services.AddScoped<IPlanService, PlanService>();
+
 
             services.AddAutoMapper(typeof(Startup));
             services.AddCustomSwagger();
