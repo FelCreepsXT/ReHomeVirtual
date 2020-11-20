@@ -48,7 +48,7 @@ namespace ReHomeVirtualBackEnd
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //Services
-            services.AddScoped<IPlanService, PlanService>();
+            services.AddScoped<IPlanService, UserService>();
 
 
             services.AddAutoMapper(typeof(Startup));

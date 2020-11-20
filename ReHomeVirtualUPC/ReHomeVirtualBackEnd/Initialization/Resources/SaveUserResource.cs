@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Membership.Resources
 {
-    public class SavePlanResource
+    public class SaveUserResource
     {
         [MaxLength(100)]
         public string Name { get; set; }
