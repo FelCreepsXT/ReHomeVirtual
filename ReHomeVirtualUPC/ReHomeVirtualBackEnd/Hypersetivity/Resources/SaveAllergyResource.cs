@@ -4,14 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReHomeVirtualBackEnd.Membership.Resources
+namespace ReHomeVirtualBackEnd.Hypersetivity.Resources
 {
-    public class SavePlanResource
+    public class SaveAllergyResource
     {
         [MaxLength(100)]
         public string Name { get; set; }
-
-        [Required]
-        public double Cost { get; set; }
     }
 }

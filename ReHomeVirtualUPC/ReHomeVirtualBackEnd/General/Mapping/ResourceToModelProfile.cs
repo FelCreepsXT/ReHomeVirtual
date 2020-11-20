@@ -8,7 +8,7 @@ namespace ReHomeVirtualBackEnd.General.Extensions
     {
         public ResourceToModelProfile()
         {
-            CreateMap<SavePlanResource, Plan>();
+            CreateMap<SaveAllergyResource, Allergy>();
         }
     }
 }

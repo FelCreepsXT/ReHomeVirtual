@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReHomeVirtualBackEnd.Membership.Domain.Model
+namespace ReHomeVirtualBackEnd.Hypersetivity.Resources
 {
-    public class Plan
+    public class AllergyResource
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Cost { get; set; }
     }
 }

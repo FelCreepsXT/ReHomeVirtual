@@ -12,7 +12,7 @@ namespace ReHomeVirtualBackEnd.General.Mapping
     {
         public ModelToResourceProfile()
         {
-            CreateMap<Plan, PlanResource>();
+            CreateMap<Allergy, AllergyResource>();
         }
     }
 }

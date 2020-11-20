@@ -43,12 +43,12 @@ namespace ReHomeVirtualBackEnd
             });
 
             //Repositories
-            services.AddScoped<IPlanRepository, PlanRepository>();
+            services.AddScoped<IAllergyRepository, AllergyRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //Services
-            services.AddScoped<IPlanService, PlanService>();
+            services.AddScoped<IAllergyService, AllergyService>();
 
 
             services.AddAutoMapper(typeof(Startup));
