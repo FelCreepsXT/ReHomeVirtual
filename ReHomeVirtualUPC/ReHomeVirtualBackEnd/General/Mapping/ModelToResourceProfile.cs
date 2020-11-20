@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ReHomeVirtualBackEnd.Membership.Domain.Model;
+using ReHomeVirtualBackEnd.Membership.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace ReHomeVirtualBackEnd.General.Mapping
     {
         public ModelToResourceProfile()
         {
+            CreateMap<Plan, PlanResource>();
         }
     }
 }
