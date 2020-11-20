@@ -39,12 +39,12 @@ namespace ReHomeVirtualBackEnd.Membership.Services
             }
         }
 
-        public async Task<IEnumerable<Plan>> ListAsync()
+        public async Task<IEnumerable<User>> ListAsync()
         {
             return await _planRepository.ListAsync();
         }
 
-        public async Task<PlanResponse> SaveAsync(Plan plan)
+        public async Task<PlanResponse> SaveAsync(User plan)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
             }
         }
 
-        public async Task<PlanResponse> UpdateAsync(int id, Plan plan)
+        public async Task<PlanResponse> UpdateAsync(int id, User plan)
         {
             var existingPlan = await _planRepository.FindById(id);
             if (existingPlan == null)

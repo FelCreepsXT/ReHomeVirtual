@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Membership.Domain.Services.Response
 {
-    public class PlanResponse : BaseResponse<Plan>
+    public class PlanResponse : BaseResponse<User>
     {
-        public PlanResponse(Plan resource) : base(resource)
+        public PlanResponse(User resource) : base(resource)
         {
         }
 

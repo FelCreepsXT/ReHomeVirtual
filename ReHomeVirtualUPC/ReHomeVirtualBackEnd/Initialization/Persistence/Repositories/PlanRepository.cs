@@ -16,27 +16,27 @@ namespace ReHomeVirtualBackEnd.Membership.Persistence.Repositories
         {
         }
 
-        public void DeleteAsync(Plan plan)
+        public void DeleteAsync(User plan)
         {
             _context.Plans.Remove(plan);
         }
 
-        public async Task<Plan> FindById(int id)
+        public async Task<User> FindById(int id)
         {
             return await _context.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Plan>> ListAsync()
+        public async Task<IEnumerable<User>> ListAsync()
         {
             return await _context.Plans.ToListAsync();
         }
 
-        public async Task SaveAsync(Plan plan)
+        public async Task SaveAsync(User plan)
         {
             await _context.Plans.AddAsync(plan);
         }
 
-        public void UpdateAsync(Plan plan)
+        public void UpdateAsync(User plan)
         {
             _context.Update(plan);
         }

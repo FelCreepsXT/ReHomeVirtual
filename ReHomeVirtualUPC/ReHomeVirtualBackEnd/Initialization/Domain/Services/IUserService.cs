@@ -9,9 +9,9 @@ namespace ReHomeVirtualBackEnd.Membership.Domain.Services.Communications
 {
     public interface IPlanService
     {
-        Task<IEnumerable<Plan>> ListAsync();
-        Task<PlanResponse> SaveAsync(Plan plan);
+        Task<IEnumerable<User>> ListAsync();
+        Task<PlanResponse> SaveAsync(User plan);
         Task<PlanResponse> DeleteAsync(int id);
-        Task<PlanResponse> UpdateAsync(int id, Plan plan);
+        Task<PlanResponse> UpdateAsync(int id, User plan);
     }
 }
