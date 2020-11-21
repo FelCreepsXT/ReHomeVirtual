@@ -44,14 +44,22 @@ namespace ReHomeVirtualBackEnd
             });
 
             //Repositories
+<<<<<<< HEAD:ReHomeVirtualBackEnd/Startup.cs
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
             services.AddScoped<IDietRepository, DietRepository>();
+=======
+            services.AddScoped<IAllergyRepository, AllergyRepository>();
+>>>>>>> app-03-allergy-management:ReHomeVirtualUPC/ReHomeVirtualBackEnd/Startup.cs
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //Services
+<<<<<<< HEAD:ReHomeVirtualBackEnd/Startup.cs
             services.AddScoped<IExerciseService, ExerciseService>();
             services.AddScoped<IDietService, DietService>();
+=======
+            services.AddScoped<IAllergyService, AllergyService>();
+>>>>>>> app-03-allergy-management:ReHomeVirtualUPC/ReHomeVirtualBackEnd/Startup.cs
 
 
             services.AddAutoMapper(typeof(Startup));

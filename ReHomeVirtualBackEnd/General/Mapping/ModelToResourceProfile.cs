@@ -12,8 +12,12 @@ namespace ReHomeVirtualBackEnd.General.Mapping
     {
         public ModelToResourceProfile()
         {
+<<<<<<< HEAD:ReHomeVirtualBackEnd/General/Mapping/ModelToResourceProfile.cs
             CreateMap<Exercise, ExerciseResource>();
             CreateMap<Diet, DietResource>();
+=======
+            CreateMap<Allergy, AllergyResource>();
+>>>>>>> app-03-allergy-management:ReHomeVirtualUPC/ReHomeVirtualBackEnd/General/Mapping/ModelToResourceProfile.cs
         }
     }
 }

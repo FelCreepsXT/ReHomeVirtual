@@ -6,6 +6,10 @@
 
   <ItemGroup>
     <Folder Include="General\Controller\" />
+<<<<<<< HEAD:ReHomeVirtualBackEnd/ReHomeVirtualBackEnd.csproj
+=======
+    <Folder Include="Hypersetivity\Controller\" />
+>>>>>>> app-03-allergy-management:ReHomeVirtualUPC/ReHomeVirtualBackEnd/ReHomeVirtualBackEnd.csproj
   </ItemGroup>
 
   <ItemGroup>
