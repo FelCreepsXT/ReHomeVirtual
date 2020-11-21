@@ -13,13 +13,13 @@ using Microsoft.Extensions.Logging;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using ReHomeVirtualBackEnd.General.General.Persistence.Context;
-using ReHomeVirtualBackEnd.Membership.Domain.Repositories;
-using ReHomeVirtualBackEnd.Membership.Persistence.Repositories;
+using ReHomeVirtualBackEnd.Routines.Domain.Repositories;
+using ReHomeVirtualBackEnd.Routines.Persistence.Repositories;
 using ReHomeVirtualBackEnd.General.Domain.Repositories;
 using ReHomeVirtualBackEnd.General.Repositories;
 using ReHomeVirtualBackEnd.General.Extensions;
-using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
-using ReHomeVirtualBackEnd.Membership.Services;
+using ReHomeVirtualBackEnd.Routines.Domain.Services;
+using ReHomeVirtualBackEnd.Routines.Services;
 
 namespace ReHomeVirtualBackEnd
 {
@@ -35,6 +35,7 @@ namespace ReHomeVirtualBackEnd
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddControllers();
 
             services.AddDbContext<AppDbContext>(options =>
@@ -43,12 +44,14 @@ namespace ReHomeVirtualBackEnd
             });
 
             //Repositories
-            services.AddScoped<IPlanRepository, PlanRepository>();
+            services.AddScoped<IExerciseRepository, ExerciseRepository>();
+            services.AddScoped<IDietRepository, DietRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //Services
-            services.AddScoped<IPlanService, UserService>();
+            services.AddScoped<IExerciseService, ExerciseService>();
+            services.AddScoped<IDietService, DietService>();
 
 
             services.AddAutoMapper(typeof(Startup));
