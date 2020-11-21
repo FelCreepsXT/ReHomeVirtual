@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gybR/eK6aLktT9kUoqs9/VB7bs5ystYFynsQd3PFFJb4O0uRlPlo99bDbH2+pXweY0sT8bZWxGnQT70Pu/+lmQ==",
+  "dgSpecHash": "rZTGE1z8JC4kpB7hnjP2tTLvCb9J0wb1fJVYl5idNp/xKay7Z+ihoGd6bKwyZ/KE0xUbA30zWHeA/xm3WeYbTw==",
   "success": true,
-  "projectFilePath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
+  "projectFilePath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucia\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\lucia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

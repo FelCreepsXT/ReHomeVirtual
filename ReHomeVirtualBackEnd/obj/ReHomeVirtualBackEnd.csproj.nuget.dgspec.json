@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {}
+    "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {}
   },
   "projects": {
-    "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {
+    "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
+        "projectUniqueName": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
         "projectName": "ReHomeVirtualBackEnd",
-        "projectPath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
+        "projectPath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualBackEnd\\ReHomeVirtualBackEnd.csproj",
         "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
-        "outputPath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualUPC\\ReHomeVirtualBackEnd\\obj\\",
+        "outputPath": "E:\\Diseño de patrones\\Proyecto\\ReHomeVirtualBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
