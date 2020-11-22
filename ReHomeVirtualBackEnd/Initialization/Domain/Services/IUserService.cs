@@ -1,17 +1,17 @@
-﻿using ReHomeVirtualBackEnd.Membership.Domain.Model;
-using ReHomeVirtualBackEnd.Membership.Domain.Services.Response;
+﻿using ReHomeVirtualBackEnd.Initialization.Domain.Model;
+using ReHomeVirtualBackEnd.Initialization.Domain.Services.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReHomeVirtualBackEnd.Membership.Domain.Services.Communications
+namespace ReHomeVirtualBackEnd.Initialization.Domain.Services.Communications
 {
-    public interface IPlanService
+    public interface IUserService
     {
         Task<IEnumerable<User>> ListAsync();
-        Task<PlanResponse> SaveAsync(User plan);
-        Task<PlanResponse> DeleteAsync(int id);
-        Task<PlanResponse> UpdateAsync(int id, User plan);
+        Task<UserResponse> SaveAsync(User plan);
+        Task<UserResponse> DeleteAsync(int id);
+        Task<UserResponse> UpdateAsync(int id, User plan);
     }
 }

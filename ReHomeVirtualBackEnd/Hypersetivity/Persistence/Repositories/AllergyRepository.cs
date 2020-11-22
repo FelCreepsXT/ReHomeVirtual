@@ -18,27 +18,27 @@ namespace ReHomeVirtualBackEnd.Hypersetivity.Persistence.Repositories
 
         public void DeleteAsync(Allergy allergy)
         {
-            _context.Plans.Remove(allergy);
+            _context.Allergies.Remove(allergy);
         }
 
         public async Task<Allergy> FindById(int id)
         {
-            return await _context.FindAsync(id);
+            return await _context.Allergies.FindAsync(id);
         }
 
         public async Task<IEnumerable<Allergy>> ListAsync()
         {
-            return await _context.Plans.ToListAsync();
+            return await _context.Allergies.ToListAsync();
         }
 
         public async Task SaveAsync(Allergy allergy)
         {
-            await _context.Plans.AddAsync(allergy);
+            await _context.Allergies.AddAsync(allergy);
         }
 
         public void UpdateAsync(Allergy allergy)
         {
-            _context.Update(allergy);
+            _context.Allergies.Update(allergy);
         }
     }
 }

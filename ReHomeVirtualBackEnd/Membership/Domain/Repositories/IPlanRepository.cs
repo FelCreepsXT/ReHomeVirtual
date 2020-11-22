@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Membership.Domain.Repositories
 {
-    public interface IUserRepository
+    public interface IPlanRepository
     {
-        Task<IEnumerable<User>> ListAsync();
-        Task<User> FindById(int id);
-        Task SaveAsync(User plan);
-        void DeleteAsync(User plan);
-        void UpdateAsync(User plan);
+        Task<IEnumerable<Plan>> ListAsync();
+        Task<Plan> FindById(int id);
+        Task SaveAsync(Plan plan);
+        void DeleteAsync(Plan plan);
+        void UpdateAsync(Plan plan);
     }
 }

@@ -4,14 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReHomeVirtualBackEnd.Routines.Resources
+namespace ReHomeVirtualBackEnd.Membership.Resources
 {
-    public class SaveExerciseResource
+    public class SavePlanResource
     {
         [MaxLength(30)]
         public string Name { get; set; }
 
-        [MaxLength(250)]
-        public string Description { get; set; }
+        [Required]
+        public double Cost { get; set; }
+
+        [Required]
+        public int MaxSession { get; set; }
     }
 }

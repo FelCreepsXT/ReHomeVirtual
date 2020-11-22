@@ -23,7 +23,20 @@ namespace ReHomeVirtualBackEnd.Routines.Services
 
         public async Task<ExerciseResponse> DeleteAsync(int id)
         {
-            return new ExerciseResponse("PAsa");
+            var existingexercise = await _exerciseRepository.FindById(id);
+            if (existingexercise == null)
+                return new ExerciseResponse("exercise not found");
+
+            try
+            {
+                _exerciseRepository.DeleteAsync(existingexercise);
+                await _unitOfWork.CompleteAsync();
+                return new ExerciseResponse(existingexercise);
+            }
+            catch (Exception e)
+            {
+                return new ExerciseResponse($"An error ocurred while deleting exercise: {e.Message}");
+            }
         }
 
         public async Task<IEnumerable<Exercise>> ListAsync()

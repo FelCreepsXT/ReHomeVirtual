@@ -20,6 +20,18 @@ using ReHomeVirtualBackEnd.General.Repositories;
 using ReHomeVirtualBackEnd.General.Extensions;
 using ReHomeVirtualBackEnd.Routines.Domain.Services;
 using ReHomeVirtualBackEnd.Routines.Services;
+using ReHomeVirtualBackEnd.Hypersetivity.Domain.Repositories;
+using ReHomeVirtualBackEnd.Hypersetivity.Persistence.Repositories;
+using ReHomeVirtualBackEnd.Hypersetivity.Services;
+using ReHomeVirtualBackEnd.Hypersetivity.Domain.Services.Communications;
+using ReHomeVirtualBackEnd.Membership.Persistence.Repositories;
+using ReHomeVirtualBackEnd.Membership.Domain.Repositories;
+using ReHomeVirtualBackEnd.Membership.Services;
+using ReHomeVirtualBackEnd.Membership.Domain.Services;
+using ReHomeVirtualBackEnd.Initialization.Persistence.Repositories;
+using ReHomeVirtualBackEnd.Initialization.Domain.Repositories;
+using ReHomeVirtualBackEnd.Initialization.Services;
+using ReHomeVirtualBackEnd.Initialization.Domain.Services.Communications;
 
 namespace ReHomeVirtualBackEnd
 {
@@ -44,23 +56,20 @@ namespace ReHomeVirtualBackEnd
             });
 
             //Repositories
-<<<<<<< HEAD:ReHomeVirtualBackEnd/Startup.cs
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
             services.AddScoped<IDietRepository, DietRepository>();
-=======
             services.AddScoped<IAllergyRepository, AllergyRepository>();
->>>>>>> app-03-allergy-management:ReHomeVirtualUPC/ReHomeVirtualBackEnd/Startup.cs
+            services.AddScoped<IPlanRepository, PlanRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             //Services
-<<<<<<< HEAD:ReHomeVirtualBackEnd/Startup.cs
             services.AddScoped<IExerciseService, ExerciseService>();
             services.AddScoped<IDietService, DietService>();
-=======
             services.AddScoped<IAllergyService, AllergyService>();
->>>>>>> app-03-allergy-management:ReHomeVirtualUPC/ReHomeVirtualBackEnd/Startup.cs
-
+            services.AddScoped<IPlanService, PlanService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddAutoMapper(typeof(Startup));
             services.AddCustomSwagger();

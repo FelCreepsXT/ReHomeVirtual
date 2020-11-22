@@ -5,11 +5,11 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ReHomeVirtualBackEnd.General.Extensions;
 using ReHomeVirtualBackEnd.Membership.Domain.Model;
-using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
+using ReHomeVirtualBackEnd.Membership.Domain.Services;
 using ReHomeVirtualBackEnd.Membership.Resources;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace ReHomeVirtualBackEnd.General.Controller
+namespace ReHomeVirtualBackEnd.Membership.Controller
 {
     [Route("api/[controller]")]
     [ApiController]

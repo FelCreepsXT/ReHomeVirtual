@@ -1,78 +1,78 @@
 ﻿using ReHomeVirtualBackEnd.General.Domain.Repositories;
-using ReHomeVirtualBackEnd.Membership.Domain.Model;
-using ReHomeVirtualBackEnd.Membership.Domain.Repositories;
-using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
-using ReHomeVirtualBackEnd.Membership.Domain.Services.Response;
+using ReHomeVirtualBackEnd.Initialization.Domain.Model;
+using ReHomeVirtualBackEnd.Initialization.Domain.Repositories;
+using ReHomeVirtualBackEnd.Initialization.Domain.Services.Communications;
+using ReHomeVirtualBackEnd.Initialization.Domain.Services.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReHomeVirtualBackEnd.Membership.Services
+namespace ReHomeVirtualBackEnd.Initialization.Services
 {
-    public class PlanService : IPlanService
+    public class UserService : IUserService
     {
-        private readonly IPlanRepository _planRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public PlanService(IPlanRepository planRepository, IUnitOfWork unitOfWork)
+        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
-            _planRepository = planRepository;
+            _userRepository = userRepository;
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<PlanResponse> DeleteAsync(int id)
+        public async Task<UserResponse> DeleteAsync(int id)
         {
-            var existingPlan = await _planRepository.FindById(id);
+            var existingPlan = await _userRepository.FindById(id);
             if (existingPlan == null)
-                return new PlanResponse("Plan not found");
+                return new UserResponse("User not found");
 
             try
             {
-                _planRepository.DeleteAsync(existingPlan);
+                _userRepository.DeleteAsync(existingPlan);
                 await _unitOfWork.CompleteAsync();
-                return new PlanResponse(existingPlan);
+                return new UserResponse(existingPlan);
             }
             catch(Exception e)
             {
-                return new PlanResponse($"An error ocurred while deleting plan: {e.Message}");
+                return new UserResponse($"An error ocurred while deleting plan: {e.Message}");
             }
         }
 
         public async Task<IEnumerable<User>> ListAsync()
         {
-            return await _planRepository.ListAsync();
+            return await _userRepository.ListAsync();
         }
 
-        public async Task<PlanResponse> SaveAsync(User plan)
+        public async Task<UserResponse> SaveAsync(User plan)
         {
             try
             {
-                await _planRepository.SaveAsync(plan);
+                await _userRepository.SaveAsync(plan);
                 await _unitOfWork.CompleteAsync();
-                return new PlanResponse(plan);
+                return new UserResponse(plan);
             }
             catch (Exception e)
             {
-                return new PlanResponse($"An error ocurred while saving plan: {e.Message}");
+                return new UserResponse($"An error ocurred while saving plan: {e.Message}");
             }
         }
 
-        public async Task<PlanResponse> UpdateAsync(int id, User plan)
+        public async Task<UserResponse> UpdateAsync(int id, User plan)
         {
-            var existingPlan = await _planRepository.FindById(id);
+            var existingPlan = await _userRepository.FindById(id);
             if (existingPlan == null)
-                return new PlanResponse("Plan not found");
+                return new UserResponse("Plan not found");
 
             try
             {
-                _planRepository.UpdateAsync(existingPlan);
+                _userRepository.UpdateAsync(existingPlan);
                 await _unitOfWork.CompleteAsync();
-                return new PlanResponse(existingPlan);
+                return new UserResponse(existingPlan);
             }
             catch (Exception e)
             {
-                return new PlanResponse($"An error ocurred while updating plan: {e.Message}");
+                return new UserResponse($"An error ocurred while updating plan: {e.Message}");
             }
         }
     }

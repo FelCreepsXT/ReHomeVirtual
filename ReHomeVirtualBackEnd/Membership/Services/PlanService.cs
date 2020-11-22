@@ -1,8 +1,8 @@
 ﻿using ReHomeVirtualBackEnd.General.Domain.Repositories;
 using ReHomeVirtualBackEnd.Membership.Domain.Model;
 using ReHomeVirtualBackEnd.Membership.Domain.Repositories;
+using ReHomeVirtualBackEnd.Membership.Domain.Services;
 using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
-using ReHomeVirtualBackEnd.Membership.Domain.Services.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,12 +39,12 @@ namespace ReHomeVirtualBackEnd.Membership.Services
             }
         }
 
-        public async Task<IEnumerable<User>> ListAsync()
+        public async Task<IEnumerable<Plan>> ListAsync()
         {
             return await _planRepository.ListAsync();
         }
 
-        public async Task<PlanResponse> SaveAsync(User plan)
+        public async Task<PlanResponse> SaveAsync(Plan plan)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
             }
         }
 
-        public async Task<PlanResponse> UpdateAsync(int id, User plan)
+        public async Task<PlanResponse> UpdateAsync(int id, Plan plan)
         {
             var existingPlan = await _planRepository.FindById(id);
             if (existingPlan == null)

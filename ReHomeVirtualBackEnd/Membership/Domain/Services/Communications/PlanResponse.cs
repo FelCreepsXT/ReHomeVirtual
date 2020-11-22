@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ReHomeVirtualBackEnd.Membership.Domain.Services.Response
+namespace ReHomeVirtualBackEnd.Membership.Domain.Services.Communications
 {
-    public class PlanResponse : BaseResponse<User>
+    public class PlanResponse : BaseResponse<Plan>
     {
-        public PlanResponse(User resource) : base(resource)
+        public PlanResponse(Plan resource) : base(resource)
         {
         }
 
