@@ -1,0 +1,9 @@
+
+*.csproj
+*.csproj
+ReHomeVirtualBackEnd/obj/ReHomeVirtualBackEnd.csproj.nuget.dgspec.json
+ReHomeVirtualBackEnd/obj/project.nuget.cache
+ReHomeVirtualBackEnd/obj/project.assets.json
+ReHomeVirtualBackEnd/obj/Debug/netcoreapp3.1/ReHomeVirtualBackEnd.csprojAssemblyReference.cache
+ReHomeVirtualBackEnd/obj/Debug/netcoreapp3.1/ReHomeVirtualBackEnd.assets.cache
+.vs/ReHomeVirtualBackEnd/v16/.suo
