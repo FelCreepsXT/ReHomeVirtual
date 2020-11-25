@@ -1,4 +1,5 @@
 ﻿using ReHomeVirtualBackEnd.Hypersetivity.Domain.Model;
+using ReHomeVirtualBackEnd.Meeting.Domain.Model;
 using ReHomeVirtualBackEnd.Membership.Domain.Model;
 using ReHomeVirtualBackEnd.Social.Domain.Model;
 using System;
@@ -24,5 +25,7 @@ namespace ReHomeVirtualBackEnd.Initialization.Domain.Model
         public IList<AllergyUser> AllergyUsers { get; set; } = new List<AllergyUser>();
         public IList<Subscription> Subscriptions { get; set; } = new List<Subscription>();
         public IList<Complaint> Complaints { get; set; } = new List<Complaint>();
+
+        public IList<SessionDatail> SessionDatails { get; set; } = new List<SessionDatail>();
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ReHomeVirtualBackEnd.Meeting.Domain.Model;
+using ReHomeVirtualBackEnd.Routines.Domain.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,5 +26,14 @@ namespace ReHomeVirtualBackEnd.Initialization.Domain.Model
         public string Address { get; set; }
 
         public bool Active { get; set; }
+
+
+        public IList<Diettag> Diettags { get; set; } = new List<Diettag>();
+
+        public IList<Exercisetag> Exercisetags { get; set; } = new List<Exercisetag>();
+
+        public IList<Session> Sessions { get; set; } = new List<Session>();
+
+        public IList<AvailableSchedule> AvailableSchedules { get; set; } = new List<AvailableSchedule>();
     }
 }

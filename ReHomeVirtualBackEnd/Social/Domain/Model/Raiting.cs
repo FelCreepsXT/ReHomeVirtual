@@ -17,5 +17,9 @@ namespace ReHomeVirtualBackEnd.Social.Domain.Model
 
         public Collaborator Collaborator { get; set; }
 
+        public int ScoreId { get; set; }
+
+        public Score Score { get; set; }
+
     }
 }
