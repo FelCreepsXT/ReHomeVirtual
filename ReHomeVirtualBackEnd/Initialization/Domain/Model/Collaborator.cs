@@ -17,7 +17,7 @@ namespace ReHomeVirtualBackEnd.Initialization.Domain.Model
 
         public string Lastname { get; set; }
 
-        public string Brithday { get; set; }
+        public DateTime Brithday { get; set; }
 
         public string Email { get; set; }
 

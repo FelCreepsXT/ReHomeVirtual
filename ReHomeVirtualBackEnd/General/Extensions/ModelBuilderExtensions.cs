@@ -8,6 +8,7 @@ namespace ReHomeVirtualBackEnd.General.Extensions
 {
     public static class ModelBuilderExtensions
     {
+        [Obsolete]
         public static void ApplySnakeCaseNamingConvention(this ModelBuilder builder)
         {
             foreach (var entity in builder.Model.GetEntityTypes())

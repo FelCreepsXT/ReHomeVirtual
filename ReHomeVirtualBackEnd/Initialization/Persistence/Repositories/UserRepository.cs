@@ -15,9 +15,9 @@ namespace ReHomeVirtualBackEnd.Initialization.Persistence.Repositories
         {
         }
 
-        public void DeleteAsync(User user)
+        public async Task AddAsync(User user)
         {
-            _context.Users.Remove(user);
+            await _context.Users.AddAsync(user);
         }
 
         public async Task<User> FindById(int id)
@@ -30,14 +30,16 @@ namespace ReHomeVirtualBackEnd.Initialization.Persistence.Repositories
             return await _context.Users.ToListAsync();
         }
 
-        public async Task SaveAsync(User user)
+        public void Remove(User user)
         {
-            await _context.Users.AddAsync(user);
+            _context.Users.Remove(user);
         }
 
-        public void UpdateAsync(User user)
+        public void Update(User user)
         {
             _context.Users.Update(user);
         }
+
     }
 }
+

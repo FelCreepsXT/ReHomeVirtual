@@ -9,9 +9,9 @@ namespace ReHomeVirtualBackEnd.Initialization.Domain.Repositories
     public interface IUserRepository
     {
         Task<IEnumerable<User>> ListAsync();
+        Task AddAsync(User user);
         Task<User> FindById(int id);
-        Task SaveAsync(User plan);
-        void DeleteAsync(User plan);
-        void UpdateAsync(User plan);
+        void Update(User user);
+        void Remove(User user);
     }
 }

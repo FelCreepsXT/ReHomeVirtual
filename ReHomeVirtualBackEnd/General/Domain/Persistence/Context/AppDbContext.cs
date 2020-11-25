@@ -17,6 +17,7 @@ namespace ReHomeVirtualBackEnd.General.General.Persistence.Context
 
         public DbSet<Plan> Plans { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Collaborator> Collaborators { get; set; }
         public DbSet<Diet> Diets { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<Allergy> Allergies { get; set; }
@@ -60,6 +61,30 @@ namespace ReHomeVirtualBackEnd.General.General.Persistence.Context
             builder.Entity<User>().Property(p => p.Address)
                 .IsRequired().HasMaxLength(150);
             builder.Entity<User>().Property(p => p.Active)
+                .IsRequired();
+
+
+            builder.Entity<Collaborator>().ToTable("Collaborators");
+            builder.Entity<Collaborator>().HasKey(p => p.Id);
+            builder.Entity<Collaborator>().Property(p => p.Id)
+                .IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Collaborator>().Property(p => p.Collaboratorname)
+                .IsRequired().HasMaxLength(80);
+            builder.Entity<Collaborator>().Property(p => p.Password)
+                .IsRequired().HasMaxLength(80);
+            builder.Entity<Collaborator>().Property(p => p.Name)
+                .IsRequired().HasMaxLength(100);
+            builder.Entity<Collaborator>().Property(p => p.Lastname)
+                .IsRequired().HasMaxLength(100);
+            builder.Entity<Collaborator>().Property(p => p.Brithday)
+                .IsRequired();
+            builder.Entity<Collaborator>().Property(p => p.Email)
+                .IsRequired().HasMaxLength(10);
+            builder.Entity<Collaborator>().Property(p => p.Phone)
+                .IsRequired().HasMaxLength(12);
+            builder.Entity<Collaborator>().Property(p => p.Address)
+                .IsRequired().HasMaxLength(150);
+            builder.Entity<Collaborator>().Property(p => p.Active)
                 .IsRequired();
 
             builder.Entity<Diet>().ToTable("Diets");

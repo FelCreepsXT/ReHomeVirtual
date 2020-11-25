@@ -32,6 +32,7 @@ using ReHomeVirtualBackEnd.Initialization.Persistence.Repositories;
 using ReHomeVirtualBackEnd.Initialization.Domain.Repositories;
 using ReHomeVirtualBackEnd.Initialization.Services;
 using ReHomeVirtualBackEnd.Initialization.Domain.Services.Communications;
+using ReHomeVirtualBackEnd.Initialization.Domain.Services;
 
 namespace ReHomeVirtualBackEnd
 {
@@ -61,6 +62,7 @@ namespace ReHomeVirtualBackEnd
             services.AddScoped<IAllergyRepository, AllergyRepository>();
             services.AddScoped<IPlanRepository, PlanRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICollaboratorRepository, CollaboratorRepository>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
@@ -70,6 +72,8 @@ namespace ReHomeVirtualBackEnd
             services.AddScoped<IAllergyService, AllergyService>();
             services.AddScoped<IPlanService, PlanService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICollaboratorService, CollaboratorService>();
+
 
             services.AddAutoMapper(typeof(Startup));
             services.AddCustomSwagger();
