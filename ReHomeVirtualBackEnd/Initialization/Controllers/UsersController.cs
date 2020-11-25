@@ -56,7 +56,7 @@ namespace ReHomeVirtualBackEnd.Initialization.Controllers
         public async Task<IActionResult> PostAsync([FromBody] SaveUserResource resource)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages());
+                return BadRequest(ModelState.GetMessages());
             var user = _mapper.Map<SaveUserResource, User>(resource);
             var result = await _userService.SaveAsync(user);
 
@@ -67,10 +67,6 @@ namespace ReHomeVirtualBackEnd.Initialization.Controllers
             return Ok(userResource);
         }
 
-        private IActionResult BadRequest(object p)
-        {
-            throw new NotImplementedException();
-        }
 
         [SwaggerOperation(
            Summary = "Update user",

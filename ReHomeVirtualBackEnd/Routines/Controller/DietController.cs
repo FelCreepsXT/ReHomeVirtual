@@ -40,7 +40,7 @@ namespace ReHomeVirtualBackEnd.Routines.Controller
         public async Task<IActionResult> PostDiet([FromBody] SaveDietResource resource)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages());
+                return BadRequest(ModelState.GetMessages());
 
             var diet = _mapper.Map<SaveDietResource, Diet>(resource);
             var result = await _dietService.SaveAsync(diet);

@@ -38,7 +38,7 @@ namespace ReHomeVirtualBackEnd.Routines.Controller
         public async Task<IActionResult> PostExercise([FromBody] SaveExerciseResource resource)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages());
+                return BadRequest(ModelState.GetMessages());
 
             var exercise = _mapper.Map<SaveExerciseResource, Exercise>(resource);
             var result = await _exerciseService.SaveAsync(exercise);

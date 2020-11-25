@@ -38,7 +38,7 @@ namespace ReHomeVirtualBackEnd.Membership.Controller
         public async Task<IActionResult> PostAsync([FromBody] SavePlanResource resource)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages());
+                return BadRequest(ModelState.GetMessages());
 
             var plan = _mapper.Map<SavePlanResource, Plan>(resource);
             var result = await _planService.SaveAsync(plan);
