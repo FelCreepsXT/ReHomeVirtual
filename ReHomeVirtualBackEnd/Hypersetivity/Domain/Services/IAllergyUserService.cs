@@ -1,8 +1,6 @@
 ﻿using ReHomeVirtualBackEnd.Hypersetivity.Domain.Model;
 using ReHomeVirtualBackEnd.Hypersetivity.Domain.Services.Communications;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Hypersetivity.Domain.Services

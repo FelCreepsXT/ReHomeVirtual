@@ -5,7 +5,6 @@ using ReHomeVirtualBackEnd.Hypersetivity.Domain.Services.Communications;
 using ReHomeVirtualBackEnd.Hypersetivity.Domain.Services.Response;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Hypersetivity.Services
@@ -33,7 +32,7 @@ namespace ReHomeVirtualBackEnd.Hypersetivity.Services
                 await _unitOfWork.CompleteAsync();
                 return new AllergyResponse(existingPlan);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new AllergyResponse($"An error ocurred while deleting plan: {e.Message}");
             }

@@ -4,8 +4,6 @@ using ReHomeVirtualBackEnd.Initialization.Domain.Model;
 using ReHomeVirtualBackEnd.Membership.Domain.Model;
 using ReHomeVirtualBackEnd.Routines.Domain.Model;
 using ReHomeVirtualBackEnd.Social.Domain.Model;
-using System;
-using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.General.General.Persistence.Context
 {
@@ -113,7 +111,7 @@ namespace ReHomeVirtualBackEnd.General.General.Persistence.Context
                 .IsRequired().HasMaxLength(100);
 
             builder.Entity<AllergyUser>().ToTable("AllergyUsers");
-            builder.Entity<AllergyUser>().HasKey( p => new { p.UserId, p.AllergyId });
+            builder.Entity<AllergyUser>().HasKey(p => new { p.UserId, p.AllergyId });
             builder.Entity<AllergyUser>().HasOne(p => p.Allergy)
                 .WithMany(p => p.AllergyUsers).HasForeignKey(p => p.AllergyId);
             builder.Entity<AllergyUser>().HasOne(p => p.User)

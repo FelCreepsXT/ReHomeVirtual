@@ -1,5 +1,4 @@
 ﻿using ReHomeVirtualBackEnd.General.Domain.Repositories;
-using ReHomeVirtualBackEnd.Initialization.Domain.Model;
 using ReHomeVirtualBackEnd.Initialization.Domain.Repositories;
 using ReHomeVirtualBackEnd.Membership.Domain.Model;
 using ReHomeVirtualBackEnd.Membership.Domain.Repositories;
@@ -7,7 +6,6 @@ using ReHomeVirtualBackEnd.Membership.Domain.Services;
 using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Membership.Services
@@ -51,7 +49,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
                 await _unitOfWork.CompleteAsync();
                 return new SubscriptionResponse(existingSubscription);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new SubscriptionResponse($"An error ocurred while deleting the Subscription: {e.Message}");
             }

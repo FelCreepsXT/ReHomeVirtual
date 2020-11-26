@@ -3,9 +3,7 @@ using ReHomeVirtualBackEnd.General.General.Persistence.Context;
 using ReHomeVirtualBackEnd.General.Repositories;
 using ReHomeVirtualBackEnd.Routines.Domain.Model;
 using ReHomeVirtualBackEnd.Routines.Domain.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Routines.Persistence.Repositories

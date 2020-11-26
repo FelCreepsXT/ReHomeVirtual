@@ -10,7 +10,7 @@ using ReHomeVirtualBackEnd.Routines.Resources;
 
 namespace ReHomeVirtualBackEnd.General.Extensions
 {
-    public class ResourceToModelProfile:Profile
+    public class ResourceToModelProfile : Profile
     {
         public ResourceToModelProfile()
         {

@@ -5,7 +5,6 @@ using ReHomeVirtualBackEnd.Initialization.Domain.Services.Communications;
 using ReHomeVirtualBackEnd.Initialization.Domain.Services.Response;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Initialization.Services
@@ -92,6 +91,6 @@ namespace ReHomeVirtualBackEnd.Initialization.Services
                 return new UserResponse($"An error ocurred while deleting role: {ex.Message}");
             }
         }
-    
+
     }
 }

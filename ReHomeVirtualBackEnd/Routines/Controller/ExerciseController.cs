@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ReHomeVirtualBackEnd.General.Extensions;
 using ReHomeVirtualBackEnd.Routines.Domain.Model;
 using ReHomeVirtualBackEnd.Routines.Domain.Services;
 using ReHomeVirtualBackEnd.Routines.Resources;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Routines.Controller
 {

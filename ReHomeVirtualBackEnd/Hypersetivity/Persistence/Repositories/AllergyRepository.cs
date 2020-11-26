@@ -3,9 +3,7 @@ using ReHomeVirtualBackEnd.General.General.Persistence.Context;
 using ReHomeVirtualBackEnd.General.Repositories;
 using ReHomeVirtualBackEnd.Hypersetivity.Domain.Model;
 using ReHomeVirtualBackEnd.Hypersetivity.Domain.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Hypersetivity.Persistence.Repositories

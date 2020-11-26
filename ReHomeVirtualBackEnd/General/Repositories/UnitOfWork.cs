@@ -1,8 +1,5 @@
 ﻿using ReHomeVirtualBackEnd.General.Domain.Repositories;
 using ReHomeVirtualBackEnd.General.General.Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.General.Repositories

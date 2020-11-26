@@ -5,7 +5,6 @@ using ReHomeVirtualBackEnd.Membership.Domain.Services;
 using ReHomeVirtualBackEnd.Membership.Domain.Services.Communications;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Membership.Services
@@ -33,7 +32,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
                 await _unitOfWork.CompleteAsync();
                 return new PlanResponse(existingPlan);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new PlanResponse($"An error ocurred while deleting plan: {e.Message}");
             }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ReHomeVirtualBackEnd.Membership.Resources
+﻿namespace ReHomeVirtualBackEnd.Membership.Resources
 {
     public class PlanResource
     {

@@ -6,7 +6,6 @@ using ReHomeVirtualBackEnd.Hypersetivity.Domain.Services.Communications;
 using ReHomeVirtualBackEnd.Initialization.Domain.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Hypersetivity.Services
@@ -39,7 +38,7 @@ namespace ReHomeVirtualBackEnd.Hypersetivity.Services
         public async Task<AllergyUserResponse> RemoveAsync(int userId, int allergyId)
         {
             var existingAllergyUser = await _allergyUserRepository.FindByUserIdAndAllergyId(userId, allergyId);
-            if (existingAllergyUser  == null)
+            if (existingAllergyUser == null)
                 return new AllergyUserResponse("AllergyUser not found");
             try
             {
@@ -47,7 +46,7 @@ namespace ReHomeVirtualBackEnd.Hypersetivity.Services
                 await _unitOfWork.CompleteAsync();
                 return new AllergyUserResponse(existingAllergyUser);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return new AllergyUserResponse($"An error ocurred while deleting the AllergyUser: {e.Message}");
             }

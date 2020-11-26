@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ReHomeVirtualBackEnd.Hypersetivity.Resources
+﻿namespace ReHomeVirtualBackEnd.Hypersetivity.Resources
 {
     public class AllergyResource
     {

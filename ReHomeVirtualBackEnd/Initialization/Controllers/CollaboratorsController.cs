@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ReHomeVirtualBackEnd.General.Extensions;
 using ReHomeVirtualBackEnd.Initialization.Domain.Model;
 using ReHomeVirtualBackEnd.Initialization.Domain.Services;
 using ReHomeVirtualBackEnd.Initialization.Resources;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 
 namespace ReHomeVirtualBackEnd.Initialization.Controllers
@@ -16,10 +14,10 @@ namespace ReHomeVirtualBackEnd.Initialization.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("api/[controller]")]
-    
+
     public class CollaboratorsController : ControllerBase
     {
-        private readonly ICollaboratorService  _collaboratorService;
+        private readonly ICollaboratorService _collaboratorService;
         private readonly IMapper _mapper;
 
         public CollaboratorsController(ICollaboratorService collaboratorService, IMapper mapper)
@@ -37,7 +35,7 @@ namespace ReHomeVirtualBackEnd.Initialization.Controllers
         [SwaggerResponse(200, "List of Collaborators", typeof(IEnumerable<CollaboratorResource>))]
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<CollaboratorResource>), 200)]
-        public async Task <IEnumerable<CollaboratorResource>> GetAllAsync()
+        public async Task<IEnumerable<CollaboratorResource>> GetAllAsync()
         {
             var collaborators = await _collaboratorService.ListAsync();
             var resources = _mapper.Map<IEnumerable<Collaborator>, IEnumerable<CollaboratorResource>>(collaborators);

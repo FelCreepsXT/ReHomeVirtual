@@ -5,7 +5,6 @@ using ReHomeVirtualBackEnd.Routines.Domain.Services;
 using ReHomeVirtualBackEnd.Routines.Domain.Services.Response;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Routines.Services
