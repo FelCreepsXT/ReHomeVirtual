@@ -7,9 +7,10 @@ namespace ReHomeVirtualBackEnd.Membership.Domain.Repositories
     public interface IPlanRepository
     {
         Task<IEnumerable<Plan>> ListAsync();
-        Task<Plan> FindById(int id);
         Task SaveAsync(Plan plan);
-        void DeleteAsync(Plan plan);
-        void UpdateAsync(Plan plan);
+        Task<Plan> FindById(int id);
+       
+        void Update(Plan plan);
+        void Remove(Plan plan);
     }
 }

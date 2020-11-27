@@ -14,9 +14,9 @@ namespace ReHomeVirtualBackEnd.Membership.Persistence.Repositories
         {
         }
 
-        public void DeleteAsync(Plan plan)
+        public async Task SaveAsync(Plan plan)
         {
-            _context.Plans.Remove(plan);
+             await _context.Plans.AddAsync(plan);
         }
 
         public async Task<Plan> FindById(int id)
@@ -29,12 +29,12 @@ namespace ReHomeVirtualBackEnd.Membership.Persistence.Repositories
             return await _context.Plans.ToListAsync();
         }
 
-        public async Task SaveAsync(Plan plan)
+        public void Remove(Plan plan)
         {
-            await _context.Plans.AddAsync(plan);
+            _context.Plans.Remove(plan);
         }
 
-        public void UpdateAsync(Plan plan)
+        public void Update(Plan plan)
         {
             _context.Update(plan);
         }

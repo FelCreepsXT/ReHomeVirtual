@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using ReHomeVirtualBackEnd.General.General.Persistence.Context;
 using ReHomeVirtualBackEnd.General.Repositories;
 using ReHomeVirtualBackEnd.Membership.Domain.Model;
@@ -14,9 +15,14 @@ namespace ReHomeVirtualBackEnd.Membership.Persistence.Repositories
         {
         }
 
-        public async Task<Subscription> FindById(int id)
+        public async Task AddAsync(Subscription subscription)
         {
-            return await _context.Subscriptions.FindAsync(id);
+            await _context.Subscriptions.AddAsync(subscription);
+        }
+
+        public async Task<Subscription> FindById(int userId)
+        {
+            return await _context.Subscriptions.FindAsync(userId);
         }
 
         public async Task<IEnumerable<Subscription>> ListAsync()
@@ -24,19 +30,20 @@ namespace ReHomeVirtualBackEnd.Membership.Persistence.Repositories
             return await _context.Subscriptions.ToListAsync();
         }
 
-        public void RemoveAsync(Subscription subscription)
+        public async Task<IEnumerable<Subscription>> ListByUserIdAsync(int userId)
+        {
+            return await _context.Subscriptions.ToListAsync();
+        }
+
+        public void Remove(Subscription subscription)
         {
             _context.Subscriptions.Remove(subscription);
         }
 
-        public async Task SaveAsync(Subscription subscription)
-        {
-            await _context.Subscriptions.AddAsync(subscription);
-        }
-
-        public void UpdateAsync(Subscription subscription)
+        public void Update(Subscription subscription)
         {
             _context.Subscriptions.Update(subscription);
         }
     }
+
 }

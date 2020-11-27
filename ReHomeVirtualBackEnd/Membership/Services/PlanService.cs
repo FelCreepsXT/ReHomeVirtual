@@ -14,12 +14,6 @@ namespace ReHomeVirtualBackEnd.Membership.Services
         private readonly IPlanRepository _planRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public PlanService(IPlanRepository planRepository, IUnitOfWork unitOfWork)
-        {
-            _planRepository = planRepository;
-            _unitOfWork = unitOfWork;
-        }
-
         public async Task<PlanResponse> DeleteAsync(int id)
         {
             var existingPlan = await _planRepository.FindById(id);
@@ -28,7 +22,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
 
             try
             {
-                _planRepository.DeleteAsync(existingPlan);
+                _planRepository.Remove(existingPlan);
                 await _unitOfWork.CompleteAsync();
                 return new PlanResponse(existingPlan);
             }
@@ -38,6 +32,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
             }
         }
 
+     
         public async Task<IEnumerable<Plan>> ListAsync()
         {
             return await _planRepository.ListAsync();
@@ -65,7 +60,7 @@ namespace ReHomeVirtualBackEnd.Membership.Services
 
             try
             {
-                _planRepository.UpdateAsync(existingPlan);
+                _planRepository.Update(existingPlan);
                 await _unitOfWork.CompleteAsync();
                 return new PlanResponse(existingPlan);
             }

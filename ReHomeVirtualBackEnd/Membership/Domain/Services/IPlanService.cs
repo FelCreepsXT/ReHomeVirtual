@@ -9,7 +9,8 @@ namespace ReHomeVirtualBackEnd.Membership.Domain.Services
     {
         Task<IEnumerable<Plan>> ListAsync();
         Task<PlanResponse> SaveAsync(Plan plan);
-        Task<PlanResponse> DeleteAsync(int id);
         Task<PlanResponse> UpdateAsync(int id, Plan plan);
+        Task<PlanResponse> DeleteAsync(int id);
+      
     }
 }

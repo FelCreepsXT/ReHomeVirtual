@@ -129,12 +129,9 @@ namespace ReHomeVirtualBackEnd.General.General.Persistence.Context
                 .IsRequired();
             builder.Entity<Subscription>().Property(p => p.UserId)
                 .IsRequired();
-            builder.Entity<Subscription>().Property(p => p.PlanId)
-                .IsRequired();
+          
             builder.Entity<Subscription>().HasOne(p => p.User)
                 .WithMany(p => p.Subscriptions).HasForeignKey(p => p.UserId);
-            builder.Entity<Subscription>().HasOne(p => p.Plan)
-                .WithMany(p => p.Subscriptions).HasForeignKey(p => p.PlanId);
 
             builder.Entity<Complaint>().ToTable("Complaints");
             builder.Entity<Allergy>().HasKey(p => p.Id);

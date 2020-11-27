@@ -1,24 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ReHomeVirtualBackEnd.Membership.Resources
 {
-    public class SavePlanResource
+    public class SaveSubscriptionResource
     {
-        [MaxLength(30)]
-        public string Name { get; set; }
-
         [Required]
-        public double Cost { get; set; }
+        public bool Active { get; set; }
 
+        [MaxLength(40)]
         [Required]
-        public int MaxSession { get; set; }
+        public int MaxSessions { get; set; }
+
         [Required]
         public DateTime CreateAt { get; set; }
 
         [Required]
         public DateTime UpdateAt { get; set; }
 
-        public int SubscruptionId { get; set; }
+        public int UserId { get; set; }
     }
 }
+

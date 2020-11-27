@@ -12,25 +12,13 @@ namespace ReHomeVirtualBackEnd.Membership.Services
 {
     public class SubscriptionService : ISubscriptionService
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IPlanRepository _planRepository;
         private readonly ISubscriptionRepository _subscriptionRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public SubscriptionService(IUserRepository userRepository, IPlanRepository planRepository, ISubscriptionRepository subscriptionRepository, IUnitOfWork unitOfWork)
+        public SubscriptionService(ISubscriptionRepository subscriptionRepository, IUnitOfWork unitOfWork)
         {
-            _userRepository = userRepository;
-            _planRepository = planRepository;
             _subscriptionRepository = subscriptionRepository;
             _unitOfWork = unitOfWork;
-        }
-
-        public async Task<SubscriptionResponse> FindById(int id)
-        {
-            var existingSubscription = await _subscriptionRepository.FindById(id);
-            if (existingSubscription == null)
-                return new SubscriptionResponse("Subscription not found");
-            return new SubscriptionResponse(existingSubscription);
         }
 
         public async Task<IEnumerable<Subscription>> ListAsync()
@@ -38,62 +26,77 @@ namespace ReHomeVirtualBackEnd.Membership.Services
             return await _subscriptionRepository.ListAsync();
         }
 
-        public async Task<SubscriptionResponse> DeleteAsync(int id)
+        public async Task<IEnumerable<Subscription>> ListByUserIdAsync(int userId)
+        {
+            return await _subscriptionRepository.ListByUserIdAsync(userId);
+        }
+
+        public async Task<SubscriptionResponse> GetByIdAsync(int id)
         {
             var existingSubscription = await _subscriptionRepository.FindById(id);
+
             if (existingSubscription == null)
                 return new SubscriptionResponse("Subscription not found");
-            try
-            {
-                _subscriptionRepository.RemoveAsync(existingSubscription);
-                await _unitOfWork.CompleteAsync();
-                return new SubscriptionResponse(existingSubscription);
-            }
-            catch (Exception e)
-            {
-                return new SubscriptionResponse($"An error ocurred while deleting the Subscription: {e.Message}");
-            }
+            return new SubscriptionResponse(existingSubscription);
         }
+
 
         public async Task<SubscriptionResponse> SaveAsync(Subscription subscription)
         {
-            var existingUser = await _userRepository.FindById(subscription.UserId);
-            if (existingUser == null)
-                return new SubscriptionResponse("User not found");
-
-            var existingPlan = await _planRepository.FindById(subscription.PlanId);
-            if (existingPlan == null)
-                return new SubscriptionResponse("Plan not found");
-
-            subscription.Plan = existingPlan;
-            subscription.User = existingUser;
             try
             {
-                await _subscriptionRepository.SaveAsync(subscription);
+                await _subscriptionRepository.AddAsync(subscription);
                 await _unitOfWork.CompleteAsync();
+
                 return new SubscriptionResponse(subscription);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return new SubscriptionResponse($"An error ocurred while saving the Subscription: {e.Message}");
+                return new SubscriptionResponse($"An error ocurred while saving subscription: {ex.Message}");
             }
         }
 
-        public async Task<SubscriptionResponse> UpdateAsync(int id, Subscription subscription)
+        public async Task<SubscriptionResponse> UpdateAsync(int userId, Subscription subscription)
         {
-            var existingSubscription = await _subscriptionRepository.FindById(id);
+            var existingSubscription = await _subscriptionRepository.FindById(userId);
             if (existingSubscription == null)
                 return new SubscriptionResponse("Subscription not found");
+
+            existingSubscription.MaxSessions = subscription.MaxSessions;
+
             try
             {
-                _subscriptionRepository.UpdateAsync(existingSubscription);
+                _subscriptionRepository.Update(existingSubscription);
                 await _unitOfWork.CompleteAsync();
+
                 return new SubscriptionResponse(existingSubscription);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return new SubscriptionResponse($"An error ocurred while deleting the Subscription: {e.Message}");
+                return new SubscriptionResponse($"An error ocurred while updating subscription: {ex.Message}");
             }
         }
+
+        public async Task<SubscriptionResponse> DeleteAsync(int id)
+        {
+            var existingSubscription = await _subscriptionRepository.FindById(id);
+
+            if (existingSubscription == null)
+                return new SubscriptionResponse("Subscription not found");
+
+            try
+            {
+                _subscriptionRepository.Remove(existingSubscription);
+                await _unitOfWork.CompleteAsync();
+
+                return new SubscriptionResponse(existingSubscription);
+            }
+            catch (Exception ex)
+            {
+                return new SubscriptionResponse($"An error ocurred while deleting subscription: {ex.Message}");
+            }
+        }
+
+
     }
 }
